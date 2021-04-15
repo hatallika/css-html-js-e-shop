@@ -1,0 +1,94 @@
+.fetured__button {
+    transition: background-color 1s linear;
+}
+
+.fetured__button:hover {
+    background-color: #FF6A6A;
+}
+
+@-webkit-keyframes slide-right {
+    0% {
+        -webkit-transform: translateX(-130px);
+        transform: translateX(-130px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        -webkit-transform: translateX(-130px);
+        transform: translateX(-130px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.nav-box__title {
+    -webkit-animation: slide-right 0.8s both;
+            animation: slide-right 0.8s both;
+}
+
+@-webkit-keyframes slide-right-long {
+    0% {
+        -webkit-transform: translateX(-600px);
+        transform: translateX(-600px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-right-long {
+    0% {
+        -webkit-transform: translateX(-600px);
+        transform: translateX(-600px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.cart__item{
+	-webkit-animation: slide-right-long 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-right-long 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+@-webkit-keyframes bg-pan-left {
+    0% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes bg-pan-left {
+    0% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.cart__item-fill:hover {
+    -webkit-animation: bg-pan-right 8s both;
+    animation: 2s ease 0s 1 normal both running bg-pan-left;
+}
+
+

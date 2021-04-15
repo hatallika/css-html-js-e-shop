@@ -1,0 +1,138 @@
+.shipping {
+    @include tablet {
+    width: 100%;
+    }  
+}
+.shipping__title {
+    @include font (16px, 19px);
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.shipping__form-wrap {
+    @include tablet {
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: nowrap;
+        justify-content: space-between;    
+    }
+}
+
+.shipping__form {
+    margin-bottom: 57px;
+    
+    @include tablet {
+        margin-bottom: 0;
+        width: 48.78%;
+    }
+
+    @include mobile {
+        width: 100%;
+    }
+    input[type="text"] {
+        @include form;
+        width: 100%;
+        height: 45px;
+        box-sizing: border-box;          
+    
+        &:focus {
+        color: $grey-border;       
+        }
+    }
+    
+}
+
+.shipping__button {
+    @include font (11px, 13px);
+    font-weight: 300;
+    color: $grey-border;
+    border: 1px solid $grey-border;
+    background: $white-color; 
+    text-transform: uppercase;
+    width: 100px;
+    height: 34px;
+    margin-top: 24px;
+    &:focus {
+        outline: none;
+        border: 1px solid $pink-color;
+    }
+    &:hover {
+        border: 1px solid #222;
+    }
+    &:active {
+        border: 1px solid $pink-color;
+    }
+}
+
+.shipping__total {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: 214px;
+    background: $pink-shipping;
+    padding: 39px 34px 42px 43px;
+    box-sizing: border-box;
+    @include tablet {
+        margin: 20px 0 0 15px;
+        
+    }
+    @include breakpoint_down (359px) {
+        width: 100%;
+    }
+}
+
+.shipping__sub-total {
+    @include font (11px, 13px);
+    color: $grey-border;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.shipping__grang-total {
+    position: relative;
+    @include font (16px, 19px);
+    font-weight: 300;
+    color: $dark-black;
+    text-align: right;
+    text-transform: uppercase;
+    margin-top: 10px;
+    &::after {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 97.178%;
+        height: 1px;
+        background: $light-grey;
+        top: 40px;
+        left: 0;     
+    }
+}
+.shipping__cost {
+    padding-left: 40px;
+}
+
+.shipping__total-button {
+    position: relative;
+    display: block;
+    width: 273px;
+    height: 50px;
+    background-color: $pink-color;
+    @include font (16px, 19px);
+    color: $white-color;
+    border: none;
+    text-transform: uppercase;
+    margin-top: 39px;
+    @include tablet {
+        width: 273px / 283px * 100%;
+    }    
+    
+    &:focus {
+        outline: none;        
+    }
+    &:hover {
+        opacity: 0.8;
+    }
+    &:active {
+        opacity: 0.5;
+    }    
+}

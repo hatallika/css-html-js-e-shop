@@ -1,0 +1,79 @@
+.advantages{
+    min-height: 341px;
+    background: $dark-black;
+    margin-top: 95px;
+    padding: 104px 0;
+    box-sizing: border-box;
+
+    @include tablet {
+        margin-top: 65px;
+        padding: 48px 0 64px;
+    }
+
+    .advantages__list {
+        display: flex;
+        flex-direction: row; 
+        @include tablet {
+            flex-direction: column;   
+        }
+        
+        @include mobile {
+            flex-direction: column;   
+        } 
+    }
+    
+    .advantages__item{
+        text-align: center;
+        &:not(:last-child) {
+            margin: 0 30px 0 0;
+            @include tablet {
+                margin: 0 0 48px 0;
+            }
+
+            @include mobile {
+                margin: 0 0 48px 0;
+            }
+        }
+    }
+    
+    .advantages__icon {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+    }
+    
+    .advantages__icon-icon1 {
+    background: url(../img/car.svg) no-repeat;
+    }
+    
+    .advantages__icon-icon2 {
+        background: url(../img/sales.svg) no-repeat;
+    }
+    
+    .advantages__icon-icon3 {
+        background: url(../img/royal.svg) no-repeat;
+    }
+    
+    .advantages__title{
+        @include font(20px,24px);
+        color: #FBFBFB;
+        text-align: center;
+    }
+    
+    .advantages__text {
+        @include font(14px,17px);
+        font-weight: 300;
+        text-align: center;
+        color: $pink-advantages;
+        padding: 20px 20px 0 20px;
+        max-width: 360px;
+
+        @include tablet {
+            margin: 0 auto;
+        }
+        @include mobile {
+            margin: 0 auto;
+        }
+    }
+}    
+

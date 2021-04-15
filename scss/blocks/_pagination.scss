@@ -1,0 +1,39 @@
+.pagination {
+    text-align: center;
+    margin: 48px 0 0 0;
+}
+
+.pagination__list {
+display: inline-block;
+background: $white-color;
+border: 1px solid $grey-pagination;
+border-radius: 8px;
+padding: 10px 15px;
+}
+
+.pagination__item {
+    display: inline-block;
+    text-align: center;
+    padding-right: 15px;
+    &:last-child, &:nth-child(7) {
+        padding-right: 0px;
+    }
+}
+
+.pagination__link {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 300;
+    color: $grey-link;
+    fill: $dark-black;
+    
+    &:hover {
+        color: $pink-nav-link;
+        fill: $pink-color;
+    }
+    &:active{
+        color: $dark-black;
+        fill: $grey-border;
+    }
+
+}

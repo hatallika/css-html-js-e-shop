@@ -1,0 +1,186 @@
+.filter {
+    display: flex;
+    padding: 51px 0 65px;
+    position: relative;
+
+    @include tablet {
+        padding: 24px 0 40px;
+    }          
+    @include mobile {
+        padding: 24px 0 32px;
+    } 
+    
+
+    .filter__list {
+        margin: auto 31%;
+        @include tablet {
+            margin: 0 0 0 auto;
+        }          
+        @include mobile {
+            margin: 0 0 0 auto;
+            line-height: 15px;
+        } 
+    }
+    
+    .filter__item {
+        display: inline;        
+    }  
+
+    .filter__link {
+        @include font (14px, 17px);
+        color: $grey-link;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        @include mobile {
+            @include font (12px, 14px); 
+        }
+
+        &::after{
+            content: ""; 
+            display: inline-block;
+            width: 11px;
+            height: 11px;
+            margin-right: 27px;
+            margin-left: 10px;
+            background: url(../img/catalog/down-arrow.svg) no-repeat 0 bottom;
+        }
+            
+        &:hover {
+            opacity: 0.8;
+        }        
+        &:active {
+            opacity: 0.5;
+        }        
+    }      
+
+    .filter__title {
+        font-weight: 600;
+        @include font (14px, 27px);
+        color: $black-black;
+        text-transform: uppercase;
+        @include mobile {
+            display: none;
+        }   
+    }
+
+    .filter__icon {        
+        @include mobile {
+            width: 37px;
+            height: 25px;
+        }
+    }
+    
+    .filter__icon-row {        
+        padding: 0 0 0 11px;
+        fill: $dark-black;
+    }
+    
+    
+}
+
+.filter__header {
+    display: flex;
+    align-items: baseline;    
+}
+.filter__header:hover + .filter__nav{
+    display: block;
+    @include mobile {
+        display: none;
+    }
+}
+
+.filter__nav {
+    position: absolute;
+    top: 35px;
+    left: -15px;
+    width: 360px;
+    padding: 17px;
+    background: $white-color;
+    z-index: 5;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    display: none;
+    &:hover {
+        display: block;
+        @include mobile {
+            display: none;
+        }
+    }
+}
+
+.filter__nav-header {
+    display: flex;
+    align-items: baseline;
+}
+
+.filter__nav-title {
+    font-weight: 600;
+    @include font (14px, 27px);
+    color: $pink-color;
+    text-transform: uppercase;    
+}
+
+.filter__nav-icon {
+    padding-left: 11px;
+    fill: $pink-color;
+}
+
+.filter__nav-list {
+    margin-top: 16px;        
+}
+
+.filter__nav-link {
+    @include font (14px, 17px);
+    color: $pink-nav-link;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    height: 37px;
+    border-bottom: 1px solid #EBEBEB;
+    display: flex;
+    align-items: center;
+    padding-left: 11px;
+
+    &:hover {
+        opacity: 0.5;
+    }
+    &:active {
+        background: $pink-background;
+    } 
+}
+
+.filter__nav-item {
+    position: relative;
+    margin-top: 20px;
+        
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 37px;
+        background: $pink-nav-link;
+    }
+
+}
+
+.filter__nav-sub-list {
+    padding-left: 11px;
+    @include mobile {
+        display: none;
+    }
+}
+
+.filter__nav-sub-link {
+    @include font (14px, 17px);
+    text-decoration: none;
+    color: $grey-link;      
+    &:hover {
+        color: $dark-black;
+    }
+    &:active {
+        color: $pink-color;
+    }
+}

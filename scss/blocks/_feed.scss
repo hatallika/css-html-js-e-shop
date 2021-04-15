@@ -1,0 +1,59 @@
+/* лента с копирайтом*/
+.feed {
+    min-height: 79px;
+    background: $dark-black;
+}
+
+.feed__wrap {
+    @include flex-center-space-between;
+    padding: 30px 0;
+    height: 100%;
+    @include mobile {
+        flex-direction: column;
+        justify-content: center;
+        padding: 9px 0;
+    }
+}
+
+.feed__copyright {
+    @include font(16px,19px);
+    color: $pink-advantages;
+    @include mobile {
+        order: 2;
+    }
+}
+
+.feed__social-list{
+    display: flex;
+    @include mobile {
+        order: 1;
+        margin: 40px 0;
+    }
+}
+
+.feed__social-item {
+    width: 30px;
+    height: 30px;
+    background: $white-color;
+    margin-right: 7px;    
+}
+
+.feed__social-item:last-child {
+    margin-right: 0px;
+}
+
+.feed__social-item:hover {
+    background: $pink-color;
+    }
+
+.feed__icon:hover{
+    fill: #fff;
+} 
+
+.feed__link {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
